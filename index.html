@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer="onload"></script>
     
 </head>
 <body>
@@ -13,6 +14,34 @@
     <div class="titles" id="pages"># of Pages</div>
     <div class="titles" id="read">Read?</div>
     <div class="titles" id="id">Book ID</div>
-    <script src="script.js"></script>
+
+    <button id="open">Click me please!</button>
+
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <form>
+                <h1>Submit a new book!</h1>
+                <label for="book-name-input">Book Name</label>
+                <input id="book-name-input" type="text">
+                <label for="author-input">Author</label>
+                <input id="author-input" type="text">
+                <label for="pages-input">Pages</label>
+                <input id="pages-input" type="number">
+                <p>Have you read this book?</p>
+                <input type="radio" id="future-reading" name="read-status">
+                <label for="future-reading">I want to read</label>
+                <input type="radio" id="current-reading" name="read-status">
+                <label for="current-reading">I am reading</label>
+                <input type="radio" id="past-reading" name="read-status">
+                <label for="past-reading">I have read</label>
+                <input type="reset">
+                <button id="mySubmit">submit</button>
+            </form>
+
+            <button id="close">Close the thing!</button>
+        </div>
+    </div>
+
+    
 </body>
 </html>
