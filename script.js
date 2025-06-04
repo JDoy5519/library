@@ -89,11 +89,31 @@ close.addEventListener ('click', () => {
 }
 );
 
-//form submission
+//initialise form variables
 
-let username;
+let title;
+let titleAuthor;
+let titlePages;
+let titleRead;
+
+//function to select correct radio option
+
+function displayRadioValue() {
+            let ele = document.getElementsByName('read-status');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                titleRead = ele[i].value;
+                console.log(titleRead);
+            }
+        }
+
+//onclick function for submit button
 
 document.getElementById("mySubmit").onclick = function () {
-    username = document.getElementById("myText").value;
-    console.log(username);
+    let title = document.getElementById("book-name-input").value;
+    console.log(title);
+    let titleAuthor = document.getElementById("author-input").value;
+    let titlePages = document.getElementById("pages-input").value;
+    let titleRead = displayRadioValue();
+    console.log(titleRead);
 }

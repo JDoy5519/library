@@ -15,6 +15,8 @@
     <div class="titles" id="read">Read?</div>
     <div class="titles" id="id">Book ID</div>
 
+    <div id="result"></div>
+
     <button id="open">Click me please!</button>
 
     <div class="modal-container" id="modal_container">
@@ -28,11 +30,11 @@
                 <label for="pages-input">Pages</label>
                 <input id="pages-input" type="number">
                 <p>Have you read this book?</p>
-                <input type="radio" id="future-reading" name="read-status">
+                <input type="radio" id="future-reading" name="read-status" value="wishlist">
                 <label for="future-reading">I want to read</label>
-                <input type="radio" id="current-reading" name="read-status">
+                <input type="radio" id="current-reading" name="read-status" value="reading">
                 <label for="current-reading">I am reading</label>
-                <input type="radio" id="past-reading" name="read-status">
+                <input type="radio" id="past-reading" name="read-status" value="read">
                 <label for="past-reading">I have read</label>
                 <input type="reset">
                 <button id="mySubmit">submit</button>
