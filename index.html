@@ -9,32 +9,23 @@
     
 </head>
 <body>
-    <div class="future-reads">
+    <div id="future-reads">
         <h1>Future Reads!</h1>
-        <div class="titles" id="future-book-name">Book Name</div>
-        <div class="titles" id="future-author">Author</div>
-        <div class="titles" id="future-pages"># of Pages</div>
-        <div class="titles" id="future-read">Read?</div>
-        <div class="titles" id="future-id">Book ID</div>
     </div>
 
-    <div class="currently-reading">
+
+
+    <div id="currently-reading">
         <h1>Currently Reading!</h1>
-        <div class="titles" id="current-book-name">Book Name</div>
-        <div class="titles" id="current-author">Author</div>
-        <div class="titles" id="current-pages"># of Pages</div>
-        <div class="titles" id="current-read">Read?</div>
-        <div class="titles" id="current-id">Book ID</div>
     </div>
 
-    <div class="reading-history">
+
+
+    <div id="reading-history">
         <h1>Past Reads!</h1>
-        <div class="titles" id="past-book-name">Book Name</div>
-        <div class="titles" id="past-author">Author</div>
-        <div class="titles" id="past-pages"># of Pages</div>
-        <div class="titles" id="past-read">Read?</div>
-        <div class="titles" id="past-id">Book ID</div>
     </div>
+
+
 
     <button id="open">Click me please!</button>
 
@@ -49,14 +40,14 @@
                 <label for="pages-input">Pages</label>
                 <input id="pages-input" type="number">
                 <p>Have you read this book?</p>
-                <input type="radio" id="future-reading" name="read-status" value="1">
+                <input type="radio" id="future-reading" name="read-status" value="I want to read this one!">
                 <label for="future-reading">I want to read</label>
-                <input type="radio" id="current-reading" name="read-status" value="2">
+                <input type="radio" id="current-reading" name="read-status" value="I am reading this one!">
                 <label for="current-reading">I am reading</label>
-                <input type="radio" id="past-reading" name="read-status" value="3">
+                <input type="radio" id="past-reading" name="read-status" value="I have read this one!">
                 <label for="past-reading">I have read</label>
                 <input type="reset">
-                <button id="mySubmit" type="submit">submit</button>
+                <button id="mySubmit" type="submit" onclick="submitUserInput()">submit</button>
             </form>
 
             <button id="close">Close the thing!</button>
