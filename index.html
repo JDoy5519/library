@@ -6,51 +6,78 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
 </head>
 <body>
+    <div class="title">
+        <h1>Welcome to your library.</h1>
+    </div>
+
     <div id="future-reads">
-        <h1>Future Reads!</h1>
+        <h2>Future Reads!</h2>
     </div>
 
 
 
     <div id="currently-reading">
-        <h1>Currently Reading!</h1>
+        <h2>Currently Reading!</h2>
     </div>
 
 
 
     <div id="reading-history">
-        <h1>Past Reads!</h1>
+        <h2>Past Reads!</h2>
     </div>
 
 
 
-    <button id="open">Click me please!</button>
+    <div id="open-button-wrapper">
+        <button id="open">Click me please!</button>
+    </div>
 
     <div class="modal-container" id="modal_container">
         <div class="modal">
             <form id="myForm">
                 <h1>Submit a new book!</h1>
-                <label for="book-name-input">Book Name</label>
-                <input id="book-name-input" type="text">
-                <label for="author-input">Author</label>
-                <input id="author-input" type="text">
-                <label for="pages-input">Pages</label>
-                <input id="pages-input" type="number">
-                <p>Have you read this book?</p>
-                <input type="radio" id="future-reading" name="read-status" value="I want to read this one!">
-                <label for="future-reading">I want to read</label>
-                <input type="radio" id="current-reading" name="read-status" value="I am reading this one!">
-                <label for="current-reading">I am reading</label>
-                <input type="radio" id="past-reading" name="read-status" value="I have read this one!">
-                <label for="past-reading">I have read</label>
-                <input type="reset">
-                <button id="mySubmit" type="submit" onclick="submitUserInput()">submit</button>
-            </form>
+                <div class="book-name">
+                    <label for="book-name-input">Book Name</label>
+                    <input id="book-name-input" type="text">
+                </div>
+                <div class="author">
+                    <label for="author-input">Author</label>
+                    <input id="author-input" type="text">
+                </div>
+                <div class="pages">
+                    <label for="pages-input">Pages</label>
+                    <input id="pages-input" type="number">
+                </div>
+                <div class="radio">
+                    <p>Have you read this book?</p>
 
-            <button id="close">Close the thing!</button>
+                    <label class="radio-option">
+                        <input type="radio" name="read-status" value="I want to read this one!">
+                        <span>I want to read</span>
+                    </label>
+                    
+                    <label class="radio-option">
+                        <input type="radio" name="read-status" value="I am reading this one!">
+                        <span>I am reading</span>
+                    </label>
+                    
+                    <label class="radio-option">
+                        <input type="radio" name="read-status" value="I have read this one!">
+                        <span>I have read</span>
+                    </label>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="reset">Reset</button>
+                    <button id="mySubmit" type="submit" onclick="submitUserInput()">Submit</button>
+                    <button id="close" type="button">Close</button>
+                </div>
+                
+            </form>
         </div>
     </div>
 
