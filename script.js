@@ -123,8 +123,6 @@ const currentlyReading = document.getElementById("currently-reading");
 const readingHistory = document.getElementById("reading-history");
 const removeThis = document.getElementsByClassName('remove');
 
-
-
 function createCard(book) {
 const newDiv = document.createElement('div');
 const removeButton = document.createElement('button');
